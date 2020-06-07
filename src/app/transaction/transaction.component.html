@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12"><h1>3 transactions</h1>
+      <!-- <table class="table␣table-striped"> -->
+      <table class="table table-striped">
+        <thead>
+          <tr class ="row">
+            <th class = "col-3">Date</th>
+            <th class = "col-3">Description</th>
+            <th class = "col-3">Account</th>
+            <th class = "col-1.5">Debit</th>
+            <th class = "col-1.5">Credit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class ="row" *ngFor="let item of items">
+            <td class = "col-3" *ngIf="item.date == '' "> {{ todate }} </td>
+            <td class = "col-3" *ngIf='item.date != "" '> {{ item.date }} </td>
+            <td class = "col-3"> {{ item.description }} </td>
+            <td class = "col-3"> {{ item.account }} </td>
+            <td class = "col-1.5" class="plus" *ngIf='item.amount < 0 '> {{ -(item.amount) }} </td>
+            <td class = "col-1.5" *ngIf='item.amount < 0 '><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+            <td class = "col-1.5" *ngIf="item.amount > 0 "><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+            <td class = "col-1.5" class="minus" *ngIf="item.amount > 0 "> {{ item.amount }} </td>
+          </tr>
+        </tbody>
+
+        <!-- <tbody>
+          <tr class ="row">
+            <td class = "col-3">1</td>
+            <td class = "col-3">Milk</td>
+            <td class = "col-3">Groceries</td>
+            <td class = "col-1.5">4.19</td>
+            <td class = "col-1.5"></td>
+          </tr>
+        </tbody> -->
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <thead>
+<tr class ="row">
+  <th scope = "col">Date</th>
+  <th scope = "col">Description</th>
+  <th scope = "col">Account</th>
+  <th scope = "col">Debit</th>
+  <th scope = "col">Credit</th>
+</tr>
+</thead> -->
+
+
+
+<!-- <tr>
+  <th>2</th>
+  <td>Pickles</td>
+  <td>Groceries</td>
+  <td>4.19</td>
+  <td></td>
+</tr>
+<tr>
+  <th>3</th>
+  <td>Monew from mom</td>
+  <td>Groceries</td>
+  <td>4.19</td>
+  <td></td>
+</tr> -->
